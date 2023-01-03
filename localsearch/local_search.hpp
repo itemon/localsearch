@@ -11,6 +11,10 @@
 //#include <stdio.h>
 #include <string>
 #include <xapian.h>
+#include <unordered_map>
+#include <iostream>
+
+using IndexDoc = std::unordered_map<std::string, std::string>;
 
 class LocalSearch {
 public:
@@ -19,6 +23,9 @@ public:
   LocalSearch operator=(LocalSearch &ls)=delete;
   ~LocalSearch();
   void search(std::string &term);
+  void commit_index();
+  
+  void index_doc(IndexDoc &doc);
 private:
   void init();
   std::string dbpath;
@@ -27,5 +34,6 @@ private:
   Xapian::TermGenerator *termGenerator;
   Xapian::Stem *stem;
 };
+
 
 #endif /* local_search_hpp */

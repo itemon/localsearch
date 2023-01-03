@@ -25,10 +25,19 @@
      attributes:nil
      error:&err];
   }
+  NSLog(@"local search database path %@", searchPath);
   std::string dbpath(searchPath.path.UTF8String);
   
   LocalSearch search(std::move(dbpath));
   std::string one_term("hello");
   search.search(one_term);
+ 
+  std::unordered_map<std::string, std::string> doc = {
+    {"x", "1"},
+    {"y", "2"},
+    {"id", "1"},
+  };
+  search.index_doc(doc);
+  search.commit_index();
 }
 @end

@@ -6,7 +6,6 @@
 //
 
 #include "local_search.hpp"
-#include <iostream>
 
 using namespace Xapian;
 
@@ -27,6 +26,37 @@ void LocalSearch::init() {
   termGenerator->set_flags(TermGenerator::FLAG_CJK_NGRAM);
   termGenerator->set_stemmer(*stem);
   std::cout << "build database of xapian" << std::endl;
+}
+
+void LocalSearch::commit_index() {
+  database->commit();
+}
+
+void LocalSearch::index_doc(IndexDoc &doc) {
+  Xapian::Document document;
+  termGenerator->set_document(document);
+  
+  std::string id;
+  for (IndexDoc::iterator i = doc.begin(); i != doc.end(); ++i) {
+    std::string key = i->first;
+    std::string val = i->second;
+    std::cout << "key" << key << ",val" << val << std::endl;
+    
+    if (key == "id") {
+      document.add_boolean_term(val);
+      id = val;
+      continue;
+    }
+    
+    termGenerator->index_text(val, 1, key);
+    termGenerator->index_text(val);
+    termGenerator->increase_termpos();
+  }
+  
+  if (!id.empty()) {
+    docid insertDocId = database->replace_document(id, document);
+    std::cout << "insert doc id " << insertDocId << std::endl;
+  }
 }
 
 LocalSearch::~LocalSearch() {

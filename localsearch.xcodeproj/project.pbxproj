@@ -23,6 +23,7 @@
 		0E6F2393296316FF006EF85A /* 500.db in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F2390296316FE006EF85A /* 500.db */; };
 		0E6F2394296316FF006EF85A /* libxapian.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; };
 		0E6F23952963170B006EF85A /* libxapian.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0ED1C8C92963A95C00DB24BF /* index_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1C8C72963A95C00DB24BF /* index_value.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		0E6F2390296316FE006EF85A /* 500.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = 500.db; sourceTree = "<group>"; };
 		0E6F2391296316FF006EF85A /* xapian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xapian.h; sourceTree = "<group>"; };
 		0E6F2392296316FF006EF85A /* libxapian.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxapian.dylib; sourceTree = "<group>"; };
+		0ED1C8C72963A95C00DB24BF /* index_value.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = index_value.cpp; sourceTree = "<group>"; };
+		0ED1C8C82963A95C00DB24BF /* index_value.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = index_value.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +176,8 @@
 				0E6F236429631488006EF85A /* LSSearchManager.h */,
 				0E6F2367296314A1006EF85A /* local_search.cpp */,
 				0E6F2368296314A1006EF85A /* local_search.hpp */,
+				0ED1C8C72963A95C00DB24BF /* index_value.cpp */,
+				0ED1C8C82963A95C00DB24BF /* index_value.hpp */,
 				0E6F236529631488006EF85A /* LSSearchManager.mm */,
 				0E6F232C2963145C006EF85A /* AppDelegate.h */,
 				0E6F232D2963145C006EF85A /* AppDelegate.m */,
@@ -397,6 +402,7 @@
 				0E6F23422963145D006EF85A /* main.m in Sources */,
 				0E6F23342963145C006EF85A /* ViewController.m in Sources */,
 				0E6F233A2963145C006EF85A /* localsearch.xcdatamodeld in Sources */,
+				0ED1C8C92963A95C00DB24BF /* index_value.cpp in Sources */,
 				0E6F2369296314A1006EF85A /* local_search.cpp in Sources */,
 				0E6F232E2963145C006EF85A /* AppDelegate.m in Sources */,
 				0E6F23312963145C006EF85A /* SceneDelegate.m in Sources */,
