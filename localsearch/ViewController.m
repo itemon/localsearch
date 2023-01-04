@@ -7,6 +7,7 @@
 
 #import "ViewController.h"
 #import "LSSearchManager.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -16,6 +17,9 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  AppDelegate *dgt = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+  NSPersistentContainer *container = [dgt persistentContainer];
+  
   // Do any additional setup after loading the view.
   LSSearchManager *search = [[LSSearchManager alloc] init];
   [search doSearch:@"hello"];

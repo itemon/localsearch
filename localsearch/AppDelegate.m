@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LSLoadExternDatabase.h"
 
 @interface AppDelegate ()
 
@@ -61,12 +62,19 @@
                     */
                     NSLog(@"Unresolved error %@, %@", error, error.userInfo);
                     abort();
+                } else {
+                  [self loadExternalDatabase];
                 }
             }];
         }
     }
     
     return _persistentContainer;
+}
+
+#pragma mark - load data from external database
+-(void)loadExternalDatabase {
+  LSLoadExternDatabase *db = [[LSLoadExternDatabase alloc] init];
 }
 
 #pragma mark - Core Data Saving support

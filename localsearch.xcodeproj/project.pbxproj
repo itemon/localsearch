@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5809DF2964F3F600094BC1 /* LSLoadExternDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E5809DE2964F3F600094BC1 /* LSLoadExternDatabase.m */; };
 		0E6F232E2963145C006EF85A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F232D2963145C006EF85A /* AppDelegate.m */; };
 		0E6F23312963145C006EF85A /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F23302963145C006EF85A /* SceneDelegate.m */; };
 		0E6F23342963145C006EF85A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F23332963145C006EF85A /* ViewController.m */; };
@@ -58,6 +59,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0E5809DD2964F3F600094BC1 /* LSLoadExternDatabase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSLoadExternDatabase.h; sourceTree = "<group>"; };
+		0E5809DE2964F3F600094BC1 /* LSLoadExternDatabase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSLoadExternDatabase.m; sourceTree = "<group>"; };
 		0E6F23292963145C006EF85A /* localsearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = localsearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E6F232C2963145C006EF85A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0E6F232D2963145C006EF85A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -181,6 +184,8 @@
 				0E6F236529631488006EF85A /* LSSearchManager.mm */,
 				0E6F232C2963145C006EF85A /* AppDelegate.h */,
 				0E6F232D2963145C006EF85A /* AppDelegate.m */,
+				0E5809DD2964F3F600094BC1 /* LSLoadExternDatabase.h */,
+				0E5809DE2964F3F600094BC1 /* LSLoadExternDatabase.m */,
 				0E6F232F2963145C006EF85A /* SceneDelegate.h */,
 				0E6F23302963145C006EF85A /* SceneDelegate.m */,
 				0E6F23322963145C006EF85A /* ViewController.h */,
@@ -399,6 +404,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E6F236629631488006EF85A /* LSSearchManager.mm in Sources */,
+				0E5809DF2964F3F600094BC1 /* LSLoadExternDatabase.m in Sources */,
 				0E6F23422963145D006EF85A /* main.m in Sources */,
 				0E6F23342963145C006EF85A /* ViewController.m in Sources */,
 				0E6F233A2963145C006EF85A /* localsearch.xcdatamodeld in Sources */,
