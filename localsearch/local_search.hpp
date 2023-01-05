@@ -14,7 +14,9 @@
 #include <unordered_map>
 #include <iostream>
 
-using IndexDoc = std::unordered_map<std::string, std::string>;
+#include "index_value.hpp"
+
+using IndexDoc = std::unordered_map<std::string, IndexValue>;
 
 class LocalSearch {
 public:
@@ -25,7 +27,7 @@ public:
   void search(std::string &term);
   void commit_index();
   
-  void index_doc(IndexDoc &doc);
+  void index_doc(std::string &docId, IndexDoc &doc);
 private:
   void init();
   std::string dbpath;

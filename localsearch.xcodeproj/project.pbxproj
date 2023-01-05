@@ -25,6 +25,7 @@
 		0E6F2394296316FF006EF85A /* libxapian.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; };
 		0E6F23952963170B006EF85A /* libxapian.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		0ED1C8C92963A95C00DB24BF /* index_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1C8C72963A95C00DB24BF /* index_value.cpp */; };
+		0EFEB1A9296653AD00640C12 /* Fort+LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEB1A8296653AD00640C12 /* Fort+LocalSearch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,6 +125,8 @@
 		0E6F2392296316FF006EF85A /* libxapian.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxapian.dylib; sourceTree = "<group>"; };
 		0ED1C8C72963A95C00DB24BF /* index_value.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = index_value.cpp; sourceTree = "<group>"; };
 		0ED1C8C82963A95C00DB24BF /* index_value.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = index_value.hpp; sourceTree = "<group>"; };
+		0EFEB1A7296653AD00640C12 /* Fort+LocalSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fort+LocalSearch.h"; sourceTree = "<group>"; };
+		0EFEB1A8296653AD00640C12 /* Fort+LocalSearch.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Fort+LocalSearch.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +189,8 @@
 				0E6F232D2963145C006EF85A /* AppDelegate.m */,
 				0E5809DD2964F3F600094BC1 /* LSLoadExternDatabase.h */,
 				0E5809DE2964F3F600094BC1 /* LSLoadExternDatabase.m */,
+				0EFEB1A7296653AD00640C12 /* Fort+LocalSearch.h */,
+				0EFEB1A8296653AD00640C12 /* Fort+LocalSearch.m */,
 				0E6F232F2963145C006EF85A /* SceneDelegate.h */,
 				0E6F23302963145C006EF85A /* SceneDelegate.m */,
 				0E6F23322963145C006EF85A /* ViewController.h */,
@@ -403,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFEB1A9296653AD00640C12 /* Fort+LocalSearch.m in Sources */,
 				0E6F236629631488006EF85A /* LSSearchManager.mm in Sources */,
 				0E5809DF2964F3F600094BC1 /* LSLoadExternDatabase.m in Sources */,
 				0E6F23422963145D006EF85A /* main.m in Sources */,

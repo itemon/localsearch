@@ -32,31 +32,29 @@ void LocalSearch::commit_index() {
   database->commit();
 }
 
-void LocalSearch::index_doc(IndexDoc &doc) {
+void LocalSearch::index_doc(std::string &docId, IndexDoc &doc) {
+  assert(!docId.empty());
   Xapian::Document document;
   termGenerator->set_document(document);
   
-  std::string id;
+  document.add_boolean_term(docId);
+  
+  valueno vn = 0;
   for (IndexDoc::iterator i = doc.begin(); i != doc.end(); ++i) {
-    std::string key = i->first;
-    std::string val = i->second;
-    std::cout << "key" << key << ",val" << val << std::endl;
+    const std::string &key = i->first;
+    const IndexValue &val = i->second;
+    std::cout << "key" << key << ",val" << val.getVal() << std::endl;
     
-    if (key == "id") {
-      document.add_boolean_term(val);
-      id = val;
-      continue;
-    }
-    
-    termGenerator->index_text(val, 1, key);
-    termGenerator->index_text(val);
+    termGenerator->index_text(val.getVal(), 1, val.getShortKey());
+    termGenerator->index_text(val.getVal());
     termGenerator->increase_termpos();
+    
+    document.add_value(vn, val.getVal());
+    ++vn;
   }
   
-  if (!id.empty()) {
-    docid insertDocId = database->replace_document(id, document);
-    std::cout << "insert doc id " << insertDocId << std::endl;
-  }
+  docid insertDocId = database->replace_document(docId, document);
+  std::cout << "insert doc id " << insertDocId << std::endl;
 }
 
 LocalSearch::~LocalSearch() {

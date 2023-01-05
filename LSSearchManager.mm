@@ -32,12 +32,13 @@
   std::string one_term("hello");
   search.search(one_term);
  
-  std::unordered_map<std::string, std::string> doc = {
+  /*std::unordered_map<std::string, std::string> doc = {
     {"x", "1"},
     {"y", "2"},
     {"id", "1"},
   };
-  search.index_doc(doc);
-  search.commit_index();
+  std::string docId = "doc_1";
+  search.index_doc(docId, doc);
+  search.commit_index();*/
 }
 @end

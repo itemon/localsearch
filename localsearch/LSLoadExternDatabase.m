@@ -9,6 +9,10 @@
 #import "AppDelegate.h"
 #import <sqlite3.h>
 
+#define APP_DGT()\
+  AppDelegate *dgt = (AppDelegate *)[[UIApplication sharedApplication] delegate];\
+  NSPersistentContainer *container = [dgt persistentContainer];
+
 @implementation LSLoadExternDatabase
 -(instancetype)init {
   self = [super init];
@@ -58,13 +62,16 @@
 }
 
 -(void)loadExtern {
-  AppDelegate *dgt = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-  NSPersistentContainer *container = [dgt persistentContainer];
+  APP_DGT()
   
   NSUserDefaults *perf = [NSUserDefaults standardUserDefaults];
   if (![perf boolForKey:@"extern_import"]) {
     [self importExten:container];
     [perf setBool:YES forKey:@"extern_import"];
   }
+}
+
+-(void)loadXapianIndex:(NSPersistentContainer *)container {
+  
 }
 @end
