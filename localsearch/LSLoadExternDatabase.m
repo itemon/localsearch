@@ -7,6 +7,7 @@
 
 #import "LSLoadExternDatabase.h"
 #import "AppDelegate.h"
+#import "Fort+LocalSearch.h"
 #import <sqlite3.h>
 
 #define APP_DGT()\
@@ -69,9 +70,13 @@
     [self importExten:container];
     [perf setBool:YES forKey:@"extern_import"];
   }
+  
+  [self loadXapianIndex:container];
 }
 
 -(void)loadXapianIndex:(NSPersistentContainer *)container {
-  
+  [Fort queryAll:container callback:^(NSError * _Nullable err, NSArray<Fort *> * _Nullable list) {
+    NSLog(@"how many result is it %ld", list ? list.count : 0L);
+  }];
 }
 @end

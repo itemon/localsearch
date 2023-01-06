@@ -21,7 +21,7 @@
   NSPersistentContainer *container = [dgt persistentContainer];
   
   // Do any additional setup after loading the view.
-  LSSearchManager *search = [[LSSearchManager alloc] init];
+  LSSearchManager *search = [LSSearchManager sharedSearchManager];
   [search doSearch:@"hello"];
 }
 
