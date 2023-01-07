@@ -24,6 +24,7 @@
 		0E6F2393296316FF006EF85A /* 500.db in Resources */ = {isa = PBXBuildFile; fileRef = 0E6F2390296316FE006EF85A /* 500.db */; };
 		0E6F2394296316FF006EF85A /* libxapian.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; };
 		0E6F23952963170B006EF85A /* libxapian.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 0E6F2392296316FF006EF85A /* libxapian.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		0EC3AFBB2969342100FF1675 /* LSSearchResultController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EC3AFBA2969342100FF1675 /* LSSearchResultController.m */; };
 		0ED1C8C92963A95C00DB24BF /* index_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0ED1C8C72963A95C00DB24BF /* index_value.cpp */; };
 		0EFEB1A9296653AD00640C12 /* Fort+LocalSearch.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EFEB1A8296653AD00640C12 /* Fort+LocalSearch.m */; };
 /* End PBXBuildFile section */
@@ -123,6 +124,8 @@
 		0E6F2390296316FE006EF85A /* 500.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = 500.db; sourceTree = "<group>"; };
 		0E6F2391296316FF006EF85A /* xapian.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xapian.h; sourceTree = "<group>"; };
 		0E6F2392296316FF006EF85A /* libxapian.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libxapian.dylib; sourceTree = "<group>"; };
+		0EC3AFB92969342100FF1675 /* LSSearchResultController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSSearchResultController.h; sourceTree = "<group>"; };
+		0EC3AFBA2969342100FF1675 /* LSSearchResultController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSSearchResultController.m; sourceTree = "<group>"; };
 		0ED1C8C72963A95C00DB24BF /* index_value.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = index_value.cpp; sourceTree = "<group>"; };
 		0ED1C8C82963A95C00DB24BF /* index_value.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = index_value.hpp; sourceTree = "<group>"; };
 		0EFEB1A7296653AD00640C12 /* Fort+LocalSearch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Fort+LocalSearch.h"; sourceTree = "<group>"; };
@@ -196,6 +199,8 @@
 				0E6F23322963145C006EF85A /* ViewController.h */,
 				0E6F23332963145C006EF85A /* ViewController.m */,
 				0E6F23352963145C006EF85A /* Main.storyboard */,
+				0EC3AFB92969342100FF1675 /* LSSearchResultController.h */,
+				0EC3AFBA2969342100FF1675 /* LSSearchResultController.m */,
 				0E6F233B2963145D006EF85A /* Assets.xcassets */,
 				0E6F233D2963145D006EF85A /* LaunchScreen.storyboard */,
 				0E6F23402963145D006EF85A /* Info.plist */,
@@ -409,6 +414,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EFEB1A9296653AD00640C12 /* Fort+LocalSearch.m in Sources */,
+				0EC3AFBB2969342100FF1675 /* LSSearchResultController.m in Sources */,
 				0E6F236629631488006EF85A /* LSSearchManager.mm in Sources */,
 				0E5809DF2964F3F600094BC1 /* LSLoadExternDatabase.m in Sources */,
 				0E6F23422963145D006EF85A /* main.m in Sources */,

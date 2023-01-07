@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "Fort+LocalSearch.h"
 #import <sqlite3.h>
+#import "LSSearchManager.h"
 
 #define APP_DGT()\
   AppDelegate *dgt = (AppDelegate *)[[UIApplication sharedApplication] delegate];\
@@ -71,12 +72,16 @@
     [perf setBool:YES forKey:@"extern_import"];
   }
   
-  [self loadXapianIndex:container];
+  if (![perf boolForKey:@"extern_index"]) {
+    [self loadXapianIndex:container];
+    [perf setBool:YES forKey:@"extern_index"];
+  }
 }
 
 -(void)loadXapianIndex:(NSPersistentContainer *)container {
   [Fort queryAll:container callback:^(NSError * _Nullable err, NSArray<Fort *> * _Nullable list) {
     NSLog(@"how many result is it %ld", list ? list.count : 0L);
+    [[LSSearchManager sharedSearchManager] indexDocs:list];
   }];
 }
 @end

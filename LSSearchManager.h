@@ -8,10 +8,12 @@
 #import <Foundation/Foundation.h>
 #import "Fort+LocalSearch.h"
 
+typedef NSMutableArray<NSDictionary<NSString *, id> *> *SearchResult;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LSSearchManager : NSObject
--(void)doSearch:(NSString *)term;
+-(SearchResult)doSearch:(NSString *)term;
 
 -(instancetype)init NS_UNAVAILABLE;
 +(instancetype)sharedSearchManager;
