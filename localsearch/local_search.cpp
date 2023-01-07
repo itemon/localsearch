@@ -81,7 +81,7 @@ void LocalSearch::search(const std::string &term, const void *context, search_ca
   queryparser.add_prefix("corp_net_profit", "PT");
   
   Enquire enquire(*database);
-  Query query(queryparser.parse_query(term));
+  Query query(queryparser.parse_query(term, QueryParser::FLAG_CJK_NGRAM));
   enquire.set_query(query);
   
   MSet search_result = enquire.get_mset(0, 20);

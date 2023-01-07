@@ -48,26 +48,26 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="corp" id="07M-VS-cc8">
-                                <rect key="frame" x="0.0" y="50" width="393" height="54.666667938232422"/>
+                                <rect key="frame" x="0.0" y="50" width="393" height="54.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="07M-VS-cc8" id="1ev-bf-mCz">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="54.666667938232422"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="54.333332061767578"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-fB-Aa6">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="The quick fox jumps over the lazy dog and dog and dog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL5-fB-Aa6">
                                             <rect key="frame" x="20" y="8" width="332" height="18"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JiC-xL-Qtz" userLabel="Second">
-                                            <rect key="frame" x="20" y="30" width="33" height="16.666666666666671"/>
+                                            <rect key="frame" x="20" y="30" width="33" height="16.333333333333329"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gru-5g-305">
-                                            <rect key="frame" x="353.33333333333331" y="32" width="19.666666666666686" height="14.666666666666664"/>
+                                            <rect key="frame" x="353.33333333333331" y="31.666666666666668" width="19.666666666666686" height="14.666666666666668"/>
                                             <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.56284224989999998" blue="0.31881666180000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
@@ -81,6 +81,7 @@
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="JiC-xL-Qtz" firstAttribute="top" secondItem="AL5-fB-Aa6" secondAttribute="bottom" constant="4" id="AW6-Am-Xyk"/>
+                                        <constraint firstItem="F30-er-zWI" firstAttribute="leading" secondItem="AL5-fB-Aa6" secondAttribute="trailing" constant="4" id="Nw4-7x-Qi6"/>
                                         <constraint firstItem="F30-er-zWI" firstAttribute="top" secondItem="1ev-bf-mCz" secondAttribute="top" constant="8" id="c1X-42-8Yu"/>
                                         <constraint firstAttribute="bottom" secondItem="Gru-5g-305" secondAttribute="bottom" constant="8" id="dCA-Zx-xNx"/>
                                         <constraint firstAttribute="trailing" secondItem="F30-er-zWI" secondAttribute="trailing" constant="20" id="hEV-QN-gXH"/>
